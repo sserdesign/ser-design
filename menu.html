@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Menu of ser-design</title>
+		<meta name="description" content="A set of fun effects for mouse-following image trails." />
+		<meta name="keywords" content="UX/UI design, web design, art, portfolio, poster design, project, Photography, Hongkonger, Graphics Designer" />
+		<meta name="author" content="Renee Ser" />
+
+		<link rel="icon" type="image/x-icon" href="/images/ReneeSer.ico">
+
+		<link rel="stylesheet" href="https://use.typekit.net/lpe8txe.css">
+
+		<link rel="stylesheet" type="text/css" href="css/menu.css" />
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+<style>
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+
+</style>
+
+	</head>
+
+		<main>
+
+<!--menu-->
+		<div class="menu-open">menu</div>
+		<div class="nav-container">
+			<div class="menu-close">close</div>
+			<nav class="menu">
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="index.html">HOME</a>
+					<img class="menu__item-img" src="images/menu-img-home.gif" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Home - Home - Home - Home - Home - Home - Home</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="https://www.behance.net/reneeser">UX/UI</a>
+					<img class="menu__item-img" src="images/menu-img-uxui.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Ux/Ui - Ux/Ui - Ux/Ui - Ux/Ui - Ux/Ui - Ux/Ui - Ux/Ui</spas>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="https://www.instagram.com/making_on_loft/">PROJECT</a>
+					<img class="menu__item-img" src="images/menu-img-project.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Project - Project - Project - Project - Project - Project - Project</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="https://www.behance.net/gallery/137371371/Jau5Liu2Takoyaki">BRANDING</a>
+					<img class="menu__item-img" src="images/menu-img-brand.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span
+								>Branding - Branding - Branding - Branding - Branding - Branding
+								- Branding</span
+							>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="https://www.instagram.com/reneeeser/">PHOTOGRAPHY</a>
+					<img class="menu__item-img" src="images/menu-img-photo.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>Photography - Photography - Photography - Photography - Photography - Photography - Photography</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="about.html">About</a>
+					<img class="menu__item-img" src="images/menu-img-about.jpg" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span>About - About - About - About - About - About - About</span>
+						</div>
+					</div>
+				</div>
+				<div class="menu__item">
+					<a class="menu__item-link"; a href="mailto:16fyser@gmail.com">Contact</a>
+					<img class="menu__item-img" src="images/menu-img-contact.GIF" />
+					<div class="marquee">
+						<div class="marquee__inner">
+							<span
+								>Contact - Contact - Contact - Contact - Contact - Contact -
+								Contact</span
+							>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<script>
+			var t1 = new TimelineMax({ paused: true });
+
+			t1.to(".nav-container", 1, {
+				left: 0,
+				ease: Expo.easeInOut,
+			});
+
+			t1.staggerFrom(
+				".menu > div",
+				0.8,
+				{ y: 100, opacity: 0, ease: Expo.easeOut },
+				"0.1",
+				"-=0.4"
+			);
+
+			t1.staggerFrom(
+				".socials",
+				0.8,
+				{ y: 100, opacity: 0, ease: Expo.easeOut },
+				"0.4",
+				"-=0.6"
+			);
+
+			t1.reverse();
+			$(document).on("click", ".menu-open", function () {
+				t1.reversed(!t1.reversed());
+			});
+			$(document).on("click", ".menu-close", function () {
+				t1.reversed(!t1.reversed());
+			});
+		</script>
+<!--menu-->
+	</body>
+</html>
